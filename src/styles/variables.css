@@ -1,0 +1,17 @@
+/* src/styles/variables.css */
+:root {
+    --bean-bg: #0f0f0f;
+    --bean-text: #e1e1e1;
+    --bean-accent: #16ff99;
+    --bean-accent2: #00b27f;
+    --bean-card: #1a1a1a;
+    --bean-border: #2e2e2e;
+    --bean-error: #ff4d4d;
+    --bean-warning: #ffaa00;
+    --bean-success: #4cd964;
+  
+    --font-family: 'Orbitron', sans-serif;
+    --transition-speed: 0.3s ease-in-out;
+    --radius-xl: 1.5rem;
+    --radius-md: 0.75rem;
+  }

@@ -1,0 +1,27 @@
+/* src/pages/Home.css */
+.slide-container {
+    height: 100vh;
+    background-color: var(--bean-accent2);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+  }
+  
+  .wipe-reveal {
+    animation: slideDownReveal 1s ease-in-out;
+  }
+  
+  @keyframes slideDownReveal {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

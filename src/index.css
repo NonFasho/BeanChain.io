@@ -1,0 +1,64 @@
+/* src/index.css */
+@import './styles/variables.css';
+
+:root {
+  font-family: var(--font-family, 'Orbitron', sans-serif);
+  background-color: var(--bean-bg);
+  color: var(--bean-text);
+  line-height: 1.5;
+  font-weight: 400;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bean-bg);
+  color: var(--bean-text);
+  font-family: var(--font-family, 'Orbitron', sans-serif);
+  display: block; /* ✅ Or remove display entirely */
+}
+
+
+a {
+  color: var(--bean-accent);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--bean-accent2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+button {
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  border-radius: var(--radius-md);
+  background-color: var(--bean-accent);
+  color: black;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+button:hover {
+  background-color: var(--bean-accent2);
+}
+button:focus {
+  outline: 2px solid var(--bean-border);
+  outline-offset: 2px;
+}

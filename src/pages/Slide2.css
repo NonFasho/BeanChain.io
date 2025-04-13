@@ -1,0 +1,40 @@
+.slide-container {
+    height: 100vh;
+    background-color: var(--bean-accent2);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Replace wipe-reveal with this */
+  .slide-in-left {
+    animation: slideFromLeft 1s ease-in-out;
+  }
+  
+  .slide-in-right {
+    animation: slideFromRight 1s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

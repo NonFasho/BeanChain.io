@@ -1,0 +1,20 @@
+.wipe-overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bean-accent2);
+    z-index: 9999;
+    animation: wipeDown 1s ease-in-out forwards;
+  }
+  
+  @keyframes wipeDown {
+    0% {
+      top: -100%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
