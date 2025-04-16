@@ -8,7 +8,7 @@ const Welcome = () => {
     <div className="welcome-container">
       <h1 className="welcome-text">WELCOME TO BEANCHAIN</h1>
       <p className="text2">POWERED BY OUTLANDISH CREATIVE LLC</p>
-      <button onClick={() => navigate('/slide1')}>ENTER</button>
+      <button onClick={() => navigate('/preppinYAbeanz')}>ENTER</button>
     </div>
   );
 };

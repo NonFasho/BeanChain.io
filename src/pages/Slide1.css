@@ -25,3 +25,91 @@
     }
   }
   
+  .slide-container {
+    height: 100vh;
+    background: linear-gradient(135deg, #b5ffcb, #8df4f2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: #0c2f18;
+  }
+  
+  .wipe-reveal {
+    animation: slideDownReveal 1s ease-in-out;
+  }
+  
+  @keyframes slideDownReveal {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .bean-bounce {
+    font-size: 3rem;
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid #0c2f18;
+    white-space: nowrap;
+    animation:
+      typing 2.5s steps(22, end),
+      blink-caret 0.75s step-end infinite;
+    font-size: 2rem;
+    width: 0; /* important */
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 22ch } /* set to the length of your text */
+  }
+  
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
+  
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 2s;
+    font-size: 1.2rem;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1 }
+  }
+  
+  .loading-dots::after {
+    content: '';
+    display: inline-block;
+    animation: dots 1.5s steps(4, end) infinite;
+    font-size: 1.5rem;
+  }
+  
+  @keyframes dots {
+    0% { content: '' }
+    25% { content: '.' }
+    50% { content: '..' }
+    75% { content: '...' }
+  }
+  

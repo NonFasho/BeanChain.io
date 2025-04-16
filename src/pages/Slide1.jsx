@@ -7,16 +7,18 @@ const Slide1 = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigate('/slide2')
-        }, 10000);
+            navigate('/map')
+        }, 6000);
 
         return () => clearTimeout(timer);
     }, [navigate]);
     
     return (
         <div className='slide-container wipe-reveal'>
-           <h1>YOU ARE HERE EARLY!</h1> 
-           <p>We are currently in development.</p>
+            <div className="bean-bounce">🫘</div>
+            <h1 className="typewriter">YOU ARE HERE EARLY!</h1> 
+            <p className="fade-in">WE ARE CURRENTLY PREPPIN THE BEANS</p>
+            <p className="loading-dots">LOADING SOME INTERACTIVE INFO</p>
         </div>
     );
 };

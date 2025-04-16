@@ -1,0 +1,71 @@
+.dev-explorer {
+    padding: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--bean-text);
+    background-color: var(--bean-bg);
+  }
+  
+  .explorer-input {
+    margin-bottom: 1.5rem;
+  }
+  
+  input {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--bean-border);
+    width: 300px;
+  }
+  
+  button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bean-accent2);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .error-msg {
+    color: red;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive grid layout for explorer results */
+  .explorer-output {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .explorer-output h3 {
+    grid-column: span 2;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Each pre block will wrap inside its cell and scroll if needed */
+  .explorer-output pre {
+    background: #111;
+    color: #0f0;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 400px;
+    font-size: 0.85rem;
+  }
+  
+  /* Stack layout on small screens */
+  @media (max-width: 768px) {
+    .explorer-output {
+      grid-template-columns: 1fr;
+    }
+  
+    .explorer-output h3 {
+      grid-column: span 1;
+    }
+  }
+  

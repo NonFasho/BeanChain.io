@@ -1,17 +1,16 @@
-/* src/styles/variables.css */
 :root {
-    --bean-bg: #0f0f0f;
-    --bean-text: #e1e1e1;
-    --bean-accent: #16ff99;
-    --bean-accent2: #00b27f;
-    --bean-card: #1a1a1a;
-    --bean-border: #2e2e2e;
-    --bean-error: #ff4d4d;
-    --bean-warning: #ffaa00;
-    --bean-success: #4cd964;
-  
-    --font-family: 'Orbitron', sans-serif;
-    --transition-speed: 0.3s ease-in-out;
-    --radius-xl: 1.5rem;
-    --radius-md: 0.75rem;
-  }
+  --bean-bg: #0b0e11;          /* deeper black-blue for a richer background */
+  --bean-text: #f2f2f2;        /* crisper off-white for high contrast */
+  --bean-accent: #21f47c;      /* brighter neon mint green */
+  --bean-accent2: #d4ede5;     /* emerald/cyber green blend */
+  --bean-card: #15191d;        /* smooth dark gray-blue for cards */
+  --bean-border: #2b3a42;      /* dark teal-gray for outlines */
+  --bean-error: #ff5f5f;       /* slightly lighter, modern red */
+  --bean-warning: #ffc857;     /* golden yellow — warm but not harsh */
+  --bean-success: #2effa5;     /* bright pastel green for success feedback */
+
+  --font-family: 'Orbitron', sans-serif;
+  --transition-speed: 0.3s ease-in-out;
+  --radius-xl: 1.5rem;
+  --radius-md: 0.75rem;
+}
