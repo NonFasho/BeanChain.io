@@ -56,6 +56,10 @@
     font-size: 3rem;
     animation: bounce 1s infinite;
   }
+
+  .bean-bounce img {
+    max-width: 10vw;
+  }
   
   @keyframes bounce {
     0%, 100% {

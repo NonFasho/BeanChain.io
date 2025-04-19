@@ -15,10 +15,12 @@ const Slide1 = () => {
     
     return (
         <div className='slide-container wipe-reveal'>
-            <div className="bean-bounce">🫘</div>
-            <h1 className="typewriter">YOU ARE HERE EARLY!</h1> 
+            <div className="bean-bounce">
+                <img src="/BunnySlippers.png" />
+            </div>
+            <h1>YOU ARE HERE EARLY!</h1> 
             <p className="fade-in">WE ARE CURRENTLY PREPPIN THE BEANS</p>
-            <p className="loading-dots">LOADING SOME INTERACTIVE INFO</p>
+            <p>LOADING SOME INTERACTIVE INFO</p>
         </div>
     );
 };

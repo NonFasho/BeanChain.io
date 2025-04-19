@@ -57,6 +57,30 @@
     z-index: 0; /* keeps it in the background */
     pointer-events: none; /* lets users interact with the content on top */
   }
+
+  .beany-bounce {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    z-index: 899;
+    animation: bounce 1s infinite;
+    pointer-events: none;
+  }
+  
+  .beany-bounce img {
+    max-width: 50vw;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
   
   /* === NODE BASE STYLE === */
   .node-box {

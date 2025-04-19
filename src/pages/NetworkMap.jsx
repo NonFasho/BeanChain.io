@@ -204,6 +204,12 @@ const NetworkMap = () => {
             </defs>
         </svg>
 
+        {step === 0 && (
+          <div className="beany-bounce">
+            <img src="/Cyborg.png" />
+          </div>
+        )}
+
 
         {/* Nodes */}
         {step >= 1 && (
