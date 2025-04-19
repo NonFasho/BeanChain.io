@@ -13,12 +13,12 @@
 - Type: 'mint'
 - Description: Mints a new Layer 2 token or adds to an existing open mint. 
 - Variants: 
-    • `mode: create` -- initial mint 
-    • `mode: mintMore` -- supply increase
+    - `mode: create` -- initial mint 
+    - `mode: mintMore` -- supply increase
 - Execution: Updates token registry and wallet balances in Layer2DB
 - Verifier: MintVerifier.java 
 - Metadata: 
-    • tokenHash, token, supply, symbol, capped, openMint
+    - tokenHash, token, supply, symbol, capped, openMint
 
 ## StakeTX (SEND BEAN TO STAKING CONTRACT)
 - Type: stake
@@ -32,8 +32,8 @@
    - Handled By: BlockBuilder → CENCALL to StakingContract
 
 - Metadata Fields:
-   - mode: "stake" or "unStake"
-   - tokenHash: (for unStake only, specifies LockedBean token)
+   - `mode: "stake" || "unStake"`
+   - `tokenHash: (for unStake only, specifies LockedBean token)`
 
 - Output:
     - For stake: a TokenTX giving the user LockedBean
