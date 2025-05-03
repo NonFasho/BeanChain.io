@@ -1,7 +1,4 @@
----
-title: BeanChain Stewardship Declaration
-sidebar_position: 1
----
+
 
 # BeanChain Sponsorship & Stewardship Declaration  
 **Issued by:** *Outlandish Creative LLC*  
