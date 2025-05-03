@@ -15,14 +15,16 @@
 - Variants: 
     - `mode: create` -- initial mint 
     - `mode: mintMore` -- supply increase
+- Model: MintTX.java
 - Execution: Updates token registry and wallet balances in Layer2DB
 - Verifier: MintVerifier.java 
 - Metadata: 
     - tokenHash, token, supply, symbol, capped, openMint
 
 ## StakeTX (SEND BEAN TO STAKING CONTRACT)
-- Type: stake
+- Type: 'stake'
 - Description: Triggers a validator node to initiate a CENCALL to the staking contract
+- Model: StakeTX.java
 - Execution Flow:
    - StakeTX is sent to the staking contract's address (contract wallet).
    - The validator node detects the stake type and reads the metadata.
@@ -38,3 +40,11 @@
 - Output:
     - For stake: a TokenTX giving the user LockedBean
     - For unStake: a TokenTX to remove the LockedBean and a TX returning BEAN in exchange 
+
+## TokenTX (TOKEN TRANSACTION - LAYER 2 TOKENS)
+- Type: 'token'
+- Description: Transfer of a Layer 2 Token
+- Execution: Updates wallets token balances via Layer2DB
+- Model: TokenTX.java
+- Metadata: 
+    - tokenHash,  
