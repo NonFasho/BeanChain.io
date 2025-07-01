@@ -171,11 +171,6 @@ const NetworkMap = () => {
   }, [step]);
 
   return (
-    <>
-    <div className="head">
-      <img src='/texture1.jpg' />
-      <h1 onClick={() => navigate('/page/main-home')}>BEANCHAIN NETWORK</h1>
-    </div>
     <div className="network-map-container">
       <img src='/mesh-bg.jpg' />
       <div className="map-area">
@@ -646,10 +641,6 @@ const NetworkMap = () => {
       </div>
 
     </div>
-    <footer className="app-footer">
-      <p>© 2025 BeanChain Network • <a href="https://limabean.xyz">LimaBean*Wallet</a></p>
-    </footer>
-    </>
   );
 };
 

@@ -1,15 +1,18 @@
+
 .body {
   background: linear-gradient(135deg, var(--bean-border), var(--bean-bg));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* REMOVE justify-content: center */
   align-items: center;
   font-family: var(--font-family);
   overflow: hidden;
   position: relative;
   text-align: center;
   color: var(--bean-text);
+  flex: 1; /* ✅ add this to let it expand */
 }
+
 
 .banner {
   margin-top: 5px;
@@ -24,22 +27,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+  height: auto;
+  max-height: none;
+  
 }
 
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* cover fills the space without distortion */
-  display: block;
-  border-radius: var(--radius-md);
-  opacity: 0.4;
-}
+
 
 .booya {
+  flex: 1; /* ✅ makes it grow to fill available space */
   margin-top: 5px;
   margin-bottom: 5px;
-  max-height: 60vh;
-  min-height: 60vh;
+  overflow: hidden;
   width: 95%;
   background-color: var(--bean-card);
   border: 1px solid var(--bean-border);
@@ -47,21 +48,104 @@
   color: var(--bean-text);
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 }
 
-.bottom-banner {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  max-height: 30vh;
-  min-height: 15vh;
-  width: 95%;
-  background: linear-gradient(135deg, var(--bean-accent2), var(--bean-bg));
-  border: 1px solid var(--bean-border);
-  border-radius: var(--radius-md);
-  color: var(--bean-text);
+
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  background: #0d0d0d;
+  padding: 10px 24px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 12px #2dd19988;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-logo {
+  height: 48px;    
+  width: 48px;      /* Match height for perfect circle */
+  border-radius: 100%;         /* Ensure round crop */
+  object-fit: cover;          /* Keeps the image proportions */
+  border: 2px solid #2dd199;  /* Optional: clean ring around the logo */
+  box-shadow: 0 0 6px #2dd19988; /* Optional: subtle glow */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+
+
+.nav-links button {
+  opacity: 1 !important;
+  background: none;
+  color: #d0ffe3;
+  border: none;
+  margin-left: 16px;
+  font-size: 0.7rem;
+  cursor: pointer;
+
+  /* REMOVE transition if not wanted */
+  transition: none !important;
+
+  /* REMOVE animation if inherited */
+  animation: none !important;
+}
+
+.nav-links button:hover {
+  color: #2dd199;
+}
+
+/* Hamburger button hidden by default */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #2dd199;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+/* Mobile menu hidden by default */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0d0d0d;
+    border-top: 1px solid #2dd199;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
 }
