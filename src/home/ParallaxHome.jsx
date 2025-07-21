@@ -77,7 +77,7 @@ export default function ParallaxHome() {
 
         <ParallaxLayer offset={0.6} speed={0.6} style={{ zIndex: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div className="drone-stack" style={{ marginLeft: '8vw' }}>
-            <a href="/map" target="_blank" rel="noopener noreferrer" className="drone-link">
+            <a href="/nav/map" target="_blank" rel="noopener noreferrer" className="drone-link">
               <img src="/assets/bg/buddy-pn.png" className="buddy bobbing" alt="rn" />
             </a>
             <div className="hologram-box">
